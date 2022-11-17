@@ -1,1 +1,1 @@
-web gunicorn live_giver.live_giver.wsgi:application --log-file -
+web gunicorn live_giver.wsgi:application --log-file -
