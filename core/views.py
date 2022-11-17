@@ -21,6 +21,20 @@ def sign_up(request):
     return Response({'message':'information wasnt verified'}, status=status.HTTP_406_NOT_ACCEPTABLE)
 
 
+@api_view(['POST'])
+def login(request):
+    
+    if request.data.email:
+        try:
+            user = Client.objects.get(email=request.data.email)
+        except Client.DoesNotExist:
+            return Response({'message':'This User doesnot exist, please check email'}, status=status.HTTP_404_NOT_FOUND)
+        if request.data.password == user.password:
+            return Response({'message':'successfully logged in'}, status=status.HTTP_202_ACCEPTED)
+        return Response({'message': 'password does not match'}, status=status.HTTP_406_NOT_ACCEPTABLE)
+    return Response({'message': 'email field is blank'}, status=status.HTTP_400_BAD_REQUEST)
+
+
 @api_view(['GET'])
 def get_patients(request):
 

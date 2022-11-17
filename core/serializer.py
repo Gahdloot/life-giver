@@ -7,6 +7,12 @@ class ClientSerializer(serializers.ModelSerializer):
         model = Client
         fields = ['name', 'phone_number', 'location']
 
+
+class LoginSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Client
+        fields = ['email', 'password']
+
 class ClientCreationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Client
