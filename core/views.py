@@ -90,5 +90,5 @@ def set_patient_status(request):
 
 @api_view(['GET'])
 def home(request):
-    return Response({'memmemmeme': 'Valid'})
+    return Response({'message': 'This is the home page for the Blood donation app'})
     
