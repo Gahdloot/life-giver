@@ -55,9 +55,9 @@ To get a local copy up and running follow these simple steps.
  
 ### Setup
  
-- ```git clone https://github.com/KingsleyIbe/medicaldonationapp.git``
+- ```git clone https://github.com/Gahdloot/life-giver.git``
  
-- ```cd medicaldonationapp```
+- ```cd life-giver```
  
 ### Running The App Locally
  
@@ -121,6 +121,7 @@ Give a ⭐️ if you like this project!
 - The amazing mentor for making us improve every day 👍
 
 ❓ FAQ
+
 We glad to answer some of your questions here:
 
 - What is Life Force?
